@@ -98,7 +98,7 @@ export class Connection {
    * Send the given message
    */
   send(message: any): void {
-    console.log('server sending new message to client:', message)
+    // console.log('server sending new message to client:', message)
 
     if (
       this.webSocket.readyState === WsReadyStates.Closing
@@ -181,7 +181,7 @@ export class Connection {
    * @private
    */
   private handleMessage(data: Uint8Array): void {
-    console.log('Connection::handleMessage', data)
+    // console.log('Connection::handleMessage', data)
 
     const message = new IncomingMessage(data)
     const documentName = message.readVarString()
@@ -202,7 +202,7 @@ export class Connection {
         ).apply(this.document, this)
       })
       .catch((e: any) => {
-        console.log('closing connection because of exception', e)
+        // console.log('closing connection because of exception', e)
         this.close({
           code: 'code' in e ? e.code : Forbidden.code,
           reason: 'reason' in e ? e.reason : Forbidden.reason,

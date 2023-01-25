@@ -43,7 +43,7 @@ export class IncomingMessage {
     const initialPos = this.decoder.pos
 
     const value = readVarUint(this.decoder)
-    console.log(`Incoming Message: readVarUint: initialPos: ${initialPos} pos: ${this.decoder.pos} ${value}`)
+    // console.log(`Incoming Message: readVarUint: initialPos: ${initialPos} pos: ${this.decoder.pos} ${value}`)
     return value
   }
 
@@ -51,7 +51,7 @@ export class IncomingMessage {
     const initialPos = this.decoder.pos
 
     const value = readVarString(this.decoder)
-    console.log(`Incoming Message: readVarString: initialPos: ${initialPos} pos: ${this.decoder.pos} ${value}`)
+    // console.log(`Incoming Message: readVarString: initialPos: ${initialPos} pos: ${this.decoder.pos} ${value}`)
     return value
   }
 

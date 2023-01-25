@@ -42,19 +42,19 @@ export class IncomingMessage {
   }
 
   writeVarUint(type: MessageType) {
-    console.log('writeVarUint provider incomingMessage:', this.encoder.cpos, type)
+    // console.log('writeVarUint provider incomingMessage:', this.encoder.cpos, type)
 
     return writeVarUint(this.encoder, type)
   }
 
   writeVarString(string: string) {
-    console.log('writeVarString provider incomingMessage:', this.encoder.cpos, string)
+    // console.log('writeVarString provider incomingMessage:', this.encoder.cpos, string)
 
     return writeVarString(this.encoder, string)
   }
 
   writeVarUint8Array(data: Uint8Array) {
-    console.log('writeVarUint8Array provider incomingMessage:', this.encoder.cpos, data)
+    // console.log('writeVarUint8Array provider incomingMessage:', this.encoder.cpos, data)
 
     return writeVarUint8Array(this.encoder, data)
   }

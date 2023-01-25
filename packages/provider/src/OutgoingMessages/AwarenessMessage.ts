@@ -17,8 +17,8 @@ export class AwarenessMessage extends OutgoingMessage {
       throw new Error('The awareness message requires clients as an argument')
     }
 
-    console.log('writing string docName', args.documentName)
-    console.log(this.encoder.cpos)
+    // console.log('writing string docName', args.documentName)
+    // console.log(this.encoder.cpos)
     encoding.writeVarString(this.encoder, args.documentName!)
     encoding.writeVarUint(this.encoder, this.type)
 

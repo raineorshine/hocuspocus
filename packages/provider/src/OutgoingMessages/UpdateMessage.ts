@@ -1,7 +1,7 @@
 import { writeVarString, writeVarUint } from 'lib0/encoding'
 import { messageYjsSyncStep1, messageYjsUpdate, writeUpdate } from 'y-protocols/sync'
 import * as encoding from 'lib0/dist/encoding'
-import { logUpdate } from 'yjs'
+// import { logUpdate } from 'yjs'
 import { MessageType, OutgoingMessageArguments } from '../types'
 import { OutgoingMessage } from '../OutgoingMessage'
 
@@ -14,8 +14,8 @@ export class UpdateMessage extends OutgoingMessage {
     writeVarString(this.encoder, args.documentName!)
     writeVarUint(this.encoder, this.type)
 
-    console.log('writing update', args.update)
-    logUpdate(args.update)
+    // console.log('writing update', args.update)
+    // logUpdate(args.update)
 
     writeUpdate(this.encoder, args.update)
 
